@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+         
+
+    <link rel="icon" href="/img/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="img/x-icon">
+    
+    <title>Be Foody</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+     <link href="css/miniostore.css" rel="stylesheet">
+  
+<style>
+ #caption {
+  height: 100px;
+  width: 100px;
+  text-align: center;
+
+}
+form.example input[type=text] {
+padding: 10px;
+font-size: 17px;
+border: 1px solid grey;
+float: left;
+width: 80%;
+background: #f1f1f1;
+}
+
+form.example button {
+float: left;
+width: 20%;
+padding: 10px;
+background: #2196F3;
+color: white;
+font-size: 17px;
+border: 1px solid grey;
+border-left: none;
+cursor: pointer;
+}
+
+form.example button:hover {
+background: #0b7dda;
+}
+
+form.example::after {
+content: "";
+clear: both;
+display: table;
+}
+h2 {
+font-family: 'Open Sans Condensed', sans-serif;
+letter-spacing: 1px;
+font-size: 2.3em;
+line-height: 44px;
+text-transform: uppercase;
+color: black;
+font-weight: 900;
+margin: 0;
+padding: 10px 0 0 30px;
+letter-spacing: 2px;
+}
+
+table.vitamins {
+    margin: 20px 0 0 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    background: #212121;
+    color: #fff;
+}
+
+table.vitamins th, table.vitamins td {
+    text-align: center;
+}
+
+table.vitamins thead {
+    line-height: 12px;
+    background: #2e63e7;
+    text-transform: uppercase;
+}
+
+table.vitamins thead th {
+    color: #fff;
+    padding: 10px;
+    letter-spacing: 1px;
+    vertical-align: bottom;
+}
+
+table.vitamins thead th:nth-child(1) {
+    width: 20%;
+    text-align: left;
+    padding-left: 20px;
+}
+
+table.vitamins thead th:nth-child(2) {
+    width: 30%;
+}
+
+table.vitamins thead th:nth-child(3) {
+    width: 35%;
+}
+
+table.vitamins thead th:nth-child(4) {
+    width: 15%;
+}
+
+table.vitamins tbody {
+    font-size: 1em;
+    line-height: 15px;
+}
+
+table.vitamins tbody tr {
+    border-top: 2px solid rgba(109, 176, 231, 0.8);
+    transition: background 0.6s, color 0.6s;
+}
+
+table.vitamins tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+table.vitamins tbody tr:hover {
+    color: #000;
+    background: rgba(255, 255, 255, 0.7);
+    font-weight: 900;
+}
+
+table.vitamins tbody td {
+    padding: 12px;
+}
+
+table.vitamins tbody tr:hover td:first-child {
+    background: rgba(0,0,0,0);
+}
+
+table.vitamins tbody td:first-child {
+    text-align: left;
+    padding-left: 20px;
+    font-weight: 700;
+    background: rgba(109, 176, 231, 0.35);
+    transition: backgrounf 0.6s;
+}
+
+table.vitamins tfoot {
+    font-size: 0.8em;
+}
+
+table.vitamins tfoot tr {
+    border-top: 2px solid #2e63e7;
+}
+
+table.vitamins tfoot td {
+    color: rgba(255,255,215,0.6);
+    text-align: left;
+    line-height: 15px;
+    padding: 15px 20px;
+}
+
+
+/* Mobile Layout */
+
+@media screen and (max-width: 400px) {
+    h1 {
+        font-size: 34px;
+        line-height: 36px;
+        padding-left: 15px;
+    }
+
+    article {
+        margin: 10px 15px;
+    }
+
+    table.vitamins {
+        font-size: 0.8em;
+    }
+}
+
+body {
+  font-family: Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+</style>
+</head>
+
+<body>
+  
+        <!-- Navigation -->
+           <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+               <div class="container">
+                   <!-- Brand and toggle get grouped for better mobile display -->
+                   <div class="navbar-header">
+                       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                           <span class="sr-only">Toggle navigation</span>
+                           <span class="icon-bar"></span>
+                           <span class="icon-bar"></span>
+                           <span class="icon-bar"></span>
+                       </button>
+                       <a class="navbar-brand" href="/dashboard">
+                                 <i class="fa fa-tint fa-lg" style="color: #f14621;"></i>
+
+                                </a>
+                   </div>
+                   <!-- Collect the nav links, forms, and other content for toggling -->
+                   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                       <ul class="nav navbar-nav">
+                           <li>
+                               <a href="/analytics"> Analytics </a>
+                           </li>
+                           
+                           
+                       </ul>
+                   </div>
+                   <!-- /.navbar-collapse -->
+               </div>
+               <!-- /.container -->
+           </nav>
+ 
+<!-- Page Content -->
+<div class="container">
+
+    ow -->
+
+    <hr>
+
+
+          <hr>
+
+          
+        <table class="vitamins">
+            <thead>
+                <tr>
+                    <th>Restaurant ID</th>
+                    <th>Restaurant Name</th>
+                    <th>Search Count</th>
+                   
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <td colspan="4">
+                        <p><strong>Fortinet Assignment</strong> Build by Rajat Singh</p>
+                    </td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <% data.forEach(function(data , id){ %>
+                    <!-- Page Features 
+                    <iframe src = "http://localhost/perspectiv/frameview/" height="200" width="400" style = "padding:5px; " > -->
+                        
+                        <tr>
+                            <td><%= data['Restaurant ID'] %></td>
+                            <td><%= data['Restaurant Name'] %></td>
+                            <td><%= data['Count'] %></td>
+                         
+               
+                      <% });%>
+            </tbody>
+        </table>
+      
+    </article>
+
+
+</body>
+<script>
+
+var dis1 = document.getElementById("browsers");
+dis1.onchange = function () {
+   if (this.value == "Grade" || this.value.length > 0) {
+      document.getElementById("grade").disabled = false;
+   }
+}
+</script>
+
+  </html>

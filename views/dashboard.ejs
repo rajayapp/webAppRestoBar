@@ -1,0 +1,254 @@
+   <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+             
+    
+        <link rel="icon" href="/img/favicon.png" type="image/png">
+        <link rel="shortcut icon" href="/img/favicon.ico" type="img/x-icon">
+        
+        <title>Be Foody</title>
+    
+        <!-- Bootstrap Core CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    
+        <!-- Custom CSS -->
+         <link href="css/miniostore.css" rel="stylesheet">
+      
+    <style>
+     #caption {
+      height: 100px;
+      width: 100px;
+      text-align: center;
+
+    }
+    form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+h2 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    letter-spacing: 1px;
+    font-size: 2.3em;
+    line-height: 44px;
+    text-transform: uppercase;
+    color: black;
+    font-weight: 900;
+    margin: 0;
+    padding: 10px 0 0 30px;
+    letter-spacing: 2px;
+}
+
+    </style>
+    </head>
+    
+    <body>
+      
+            <!-- Navigation -->
+               <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                   <div class="container">
+                       <!-- Brand and toggle get grouped for better mobile display -->
+                       <div class="navbar-header">
+                           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                               <span class="sr-only">Toggle navigation</span>
+                               <span class="icon-bar"></span>
+                               <span class="icon-bar"></span>
+                               <span class="icon-bar"></span>
+                           </button>
+                           <a class="navbar-brand" href="/analytics">
+                                     <i class="fa fa-tint fa-lg" style="color: #f14621;"></i>
+
+                                    </a>
+                       </div>
+                       <!-- Collect the nav links, forms, and other content for toggling -->
+                       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                           <ul class="nav navbar-nav">
+                               <li>
+                                   <a href="/analytics"> Analytics </a>
+                               </li>
+                               
+                               
+                           </ul>
+                       </div>
+                       <!-- /.navbar-collapse -->
+                   </div>
+                   <!-- /.container -->
+               </nav>
+     
+<!-- Page Content -->
+ <div class="container">
+
+        <!-- Jumbotron Header -->
+        <header class="jumbotron hero-spacer">
+        
+            <hr>
+            <h2 style="text-align: center">I'm into mellow dates with  good food. </h2>
+                <hr>
+            
+            <form class="example" action="/search" method="POST">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i> SEARCH</i></button>
+              </form>
+
+        </header>
+
+    <!-- Title -->
+    <div class="row">
+            <div class="col-lg-12">
+                
+                <div style='text-align: center'>        
+                        <form action="/sort" method="POST">
+                                <input list="browsers" name="browser" autocomplete="off" >
+                                <datalist id="browsers">
+                                  <option value='Aggregate rating'>
+                                  <option value="Votes">
+                                  <option value="Average Cost for two">
+                                </datalist>
+                                <button type="submit"><i> SORT BY</i></button>
+                              </form>
+                            </div>
+
+                                <hr> 
+<div style='text-align: center'>        
+        <form action="/filter" method="POST">
+                <input list="Cuisines" name="Cuisines"  >
+                <datalist id="Cuisines">
+                  <option value="Cuisines">
+                  
+                </datalist>
+    
+                                                <input list="type" name="type" >
+                                                <datalist id="type">
+                                                <option value="French ">
+                                                <option value="Japanese ">
+                                                <option value="Desserts ">
+                                                <option value="Seafood">
+                                                <option value="Asian">
+                                                <option value="French ">
+                                                <option value="Japanese ">
+                                                <option value="Desserts ">
+                                                <option value="Seafood">
+                                                <option value="Asian">
+                                                <option value="Filipino ">
+                                                <option value="Indian ">
+                                                <option value="Sushi ">
+                                                <option value="Korean">
+                                                <option value="Chinese">
+                                                <option value="European">
+                                                <option value="Mexican">
+                                                <option value="Desserts ">
+                                                <option value="American">
+                                                <option value="Ice Cream">
+                                                <option value="Cafe ">
+                                                <option value="Italian">
+                                                <option value="Pizza ">
+                                                <option value="Bakery">
+                                                <option value="Mediterranean">  
+                                                <option value="Arabian ">
+                                                <option value="Bar Food">
+                                                <option value="Grill ">
+                                                <option value="International">
+                                                <option value="Peruvian"> 
+                                                <option value="Fast Food">
+                                                <option value="Brazilian"> 
+                                                <option value="Latin American">
+                                                <option value="Burger">
+                                                <option value="Juices ">
+                                                <option value="Healthy Food">
+                                                <option value="Beverages"> 
+                                                <option value="Lebanese ">
+                                                <option value="Sandwich">
+                                                <option value="Steak ">
+                                                <option value="BBQ">
+                                                <option value="Gourmet Fast Food">
+                                                <option value="Mineira ">
+                                                <option value="North Eastern">
+                                                <option value="Coffee and Tea ">
+                                                <option value="Vegetarian">
+                                                <option value="Tapas">
+
+
+
+
+                                                </datalist>
+    
+               
+                                                <button type="submit"><i> FILTER BY</i></button>
+                                            </form>
+            </div>   
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+    
+
+        <!-- Page Features -->
+        <div class="row text-center">
+                <% data.forEach(function(data , id){ %>
+                    <div class="col-md-3 col-sm-6 hero-feature" >
+               
+                    <div class="thumbnail">
+                    <img src="/views/house1.jpg" max-height=200 max-width=200  >
+                    <div class="caption" style="height:200px ; width:250px ; text-align: center" >
+                        <h5><%= data['Restaurant Name'] %></h5>
+                        <h6><%= data['Cuisines'] %></h6>
+                    
+                        <h6>Cost : <%= data['Average Cost for two'] %></h6>
+                        <h6>Rating : <%= data['Aggregate rating'] %></h6>
+                        <h6>Votes : <%= data['Votes'] %></h6>
+
+                   
+                        <div class="caption" style="text-align: center" >
+
+                        <p>
+                            <a href='/resto_details?id=<%= data["Restaurant ID"] %>' class="btn btn-primary" style="float:inherit" >More Info!</a>
+                        </p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+       
+            <% });%>
+
+
+        </div>
+        <!-- /.row -->
+
+        <hr>
+ 
+    </div>
+    <!-- /.container -->
+
+ 
+          
+        </body>
+    </html>

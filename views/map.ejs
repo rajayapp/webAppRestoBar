@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<title>Restorent Details</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    /* Always set the map height explicitly to define the size of the div
+     * element that contains the map. */
+    #map {
+      height: 425px;
+      width: 625px;
+    }
+    /* Optional: Makes the sample page fill the window. */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Oxygen);
+
+/* Page layout */
+
+
+
+header {
+    margin: 0;
+    background: #000;
+    height: 65px;
+    padding: 1px;
+}
+
+article {
+    margin: 40px 30px;
+}
+
+h1 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    letter-spacing: 1px;
+    font-size: 2.3em;
+    line-height: 44px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 900;
+    margin: 0;
+    padding: 10px 0 0 30px;
+    letter-spacing: 2px;
+}
+
+h2 { margin: 20px 0 10px 0;
+    font-weight: 900;
+}
+
+p {
+    margin: 20px 0 5px 0;
+}
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+  </style>
+
+<body class="w3-content" style="max-width:1500px">
+
+   <h2> <a href="/dashboard"> Go Back </a></h2>
+   <hr>
+
+   <h2><%= data1['Restaurant Name'] %> </h2>
+
+
+    <form class="example" action="/search" method="POST">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i> SEARCH</i></button>
+    </form>
+   
+    
+   
+    <hr>
+    
+
+      <hr>
+
+
+<!-- First Grid: Logo & About -->
+<div class="w3-row">
+ 
+<div class="w3-half w3-container">
+        <h2 class="w3-xxlarge w3-text-grey">Meeting someplace with old and new friends, ordering wine, eating food, surrounded by strangers, <br/>
+            I think is the core of what it means to live a civilised life
+          </h2>
+        </div>
+
+</div>
+
+<!-- Second Grid: Resent -->
+<div class="w3-panel w3-text-grey">
+<h4>Google Location :</h4>
+</div>
+<div class="w3-row">
+<div class="w3-half w3-container">
+    <div id="map"></div>
+    <p class="w3-xlarge w3-text-grey">
+            Country Code :<%= data2['Country Code'] %><br/>
+            City :<%= data2['City'] %><br/>
+            Address :<%= data2['Address'] %><br/>
+            Locality :<%= data2['Locality'] %><br/>
+            Locality Verbose :<%= data2['Locality Verbose'] %><br/>
+            Longitude :<%= data2['Longitude'] %><br/>
+            Latitude :<%= data2['Latitude'] %><br/>
+    </p>      
+</div>
+
+<div class="w3-half w3-container">
+  <img src="/views/house1.jpg" style="width:600px ; height:425px">
+  <p class="w3-xlarge w3-text-grey">
+        Restaurant ID :<%= data1['Restaurant ID'] %><br/>
+        Restaurant Name :<%= data1['Restaurant Name'] %><br/>
+        Average Cost for two :<%= data1['Average Cost for two'] %><br/>
+        Locality :<%= data1['Locality'] %><br/>
+        Aggregate rating :<%= data1['Aggregate rating'] %><br/>
+        Rating text :<%= data1['Rating text'] %><br/>
+        Votes :<%= data1['Votes'] %><br/>
+    </p>      
+
+  </div>
+</div>
+
+
+
+<!-- Footer -->
+<div class="w3-row w3-section">
+  <div class="w3-third w3-container w3-black w3-large" style="height:250px">
+    <h2>Contact Info</h2>
+    <p><i class="fa fa-map-marker" style="width:30px"></i> Banglore, IN</p>
+    <p><i class="fa fa-phone" style="width:30px"></i> Phone: +91 9566181734</p>
+    <p><i class="fa fa-envelope" style="width:30px"> </i> Email: betterplace@gmail.com</p>
+  </div>
+  <div class="w3-third w3-center w3-large w3-dark-grey w3-text-white" style="height:250px">
+    <h2>Contact Us</h2>
+    <p>If you have an idea.</p>
+    <p>What are you waiting for?</p>
+  </div>
+  <div class="w3-third w3-center w3-large w3-grey w3-text-white" style="height:250px">
+    <h2>Like Us</h2>
+    <i class="w3-xlarge fa fa-facebook-official"></i><br>
+    <i class="w3-xlarge fa fa-pinterest-p"></i><br>
+    <i class="w3-xlarge fa fa-twitter"></i><br>
+    <i class="w3-xlarge fa fa-flickr"></i><br>
+    <i class="w3-xlarge fa fa-linkedin"></i>
+  </div>
+</div>
+
+<script>
+
+    // The following example creates a marker in Stockholm, Sweden using a DROP
+    // animation. Clicking on the marker will toggle the animation between a BOUNCE
+    // animation and no animation.
+
+    var marker;
+    var lat = Number("<%= data2['Latitude'] %>")
+    var lng = Number("<%= data2['Longitude'] %>")
+    console.log(lat)
+    console.log(lng)
+    function initMap() {
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 13,
+        center: {lat: lat, lng: lng}
+      });
+
+      marker = new google.maps.Marker({
+        map: map,
+        draggable: true,
+        animation: google.maps.Animation.DROP,
+        position: {lat: lat, lng: lng}
+      });
+      marker.addListener('click', toggleBounce);
+    }
+
+    function toggleBounce() {
+      if (marker.getAnimation() !== null) {
+        marker.setAnimation(null);
+      } else {
+        marker.setAnimation(google.maps.Animation.BOUNCE);
+      }
+    }
+  </script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOnOiucgUGBn-G4BhgpJVnS9qyVy_aiOA&callback=initMap">
+  </script>
+</body>
+</html>
+
+

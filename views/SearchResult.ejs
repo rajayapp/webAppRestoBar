@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  </head>
+
+<style>
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Oxygen);
+
+/* Page layout */
+
+body {
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Oxygen', sans-serif;
+    color: #444;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 300;
+}
+
+header {
+    margin: 0;
+    background: #000;
+    height: 65px;
+    padding: 1px;
+}
+
+article {
+    margin: 40px 30px;
+}
+
+h1 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    letter-spacing: 1px;
+    font-size: 2.3em;
+    line-height: 44px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 900;
+    margin: 0;
+    padding: 10px 0 0 30px;
+    letter-spacing: 2px;
+}
+
+h2 { margin: 20px 0 10px 0;
+    font-weight: 900;
+}
+
+p {
+    margin: 20px 0 5px 0;
+}
+
+
+/* Table Layout */
+
+table.vitamins {
+    margin: 20px 0 0 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    background: #212121;
+    color: #fff;
+}
+
+table.vitamins th, table.vitamins td {
+    text-align: center;
+}
+
+table.vitamins thead {
+    line-height: 12px;
+    background: #2e63e7;
+    text-transform: uppercase;
+}
+
+table.vitamins thead th {
+    color: #fff;
+    padding: 10px;
+    letter-spacing: 1px;
+    vertical-align: bottom;
+}
+
+table.vitamins thead th:nth-child(1) {
+    width: 20%;
+    text-align: left;
+    padding-left: 20px;
+}
+
+table.vitamins thead th:nth-child(2) {
+    width: 30%;
+}
+
+table.vitamins thead th:nth-child(3) {
+    width: 35%;
+}
+
+table.vitamins thead th:nth-child(4) {
+    width: 15%;
+}
+
+table.vitamins tbody {
+    font-size: 1em;
+    line-height: 15px;
+}
+
+table.vitamins tbody tr {
+    border-top: 2px solid rgba(109, 176, 231, 0.8);
+    transition: background 0.6s, color 0.6s;
+}
+
+table.vitamins tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+table.vitamins tbody tr:hover {
+    color: #000;
+    background: rgba(255, 255, 255, 0.7);
+    font-weight: 900;
+}
+
+table.vitamins tbody td {
+    padding: 12px;
+}
+
+table.vitamins tbody tr:hover td:first-child {
+    background: rgba(0,0,0,0);
+}
+
+table.vitamins tbody td:first-child {
+    text-align: left;
+    padding-left: 20px;
+    font-weight: 700;
+    background: rgba(109, 176, 231, 0.35);
+    transition: backgrounf 0.6s;
+}
+
+table.vitamins tfoot {
+    font-size: 0.8em;
+}
+
+table.vitamins tfoot tr {
+    border-top: 2px solid #2e63e7;
+}
+
+table.vitamins tfoot td {
+    color: rgba(255,255,215,0.6);
+    text-align: left;
+    line-height: 15px;
+    padding: 15px 20px;
+}
+
+
+/* Mobile Layout */
+
+@media screen and (max-width: 400px) {
+    h1 {
+        font-size: 34px;
+        line-height: 36px;
+        padding-left: 15px;
+    }
+
+    article {
+        margin: 10px 15px;
+    }
+
+    table.vitamins {
+        font-size: 0.8em;
+    }
+}
+
+body {
+  font-family: Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+</style>
+<body>
+
+    <article>
+        <h2>BETTERPLACE </h2>
+       
+        <form class="example" action="/search" method="POST">
+          <input type="text" placeholder="Search.." name="search">
+          <button type="submit"><i> SEARCH</i></button>
+        </form>
+       <hr>
+       <div style='text-align: center'>        
+            <form action="/filter" method="POST" >
+                    <input list="browsers" name="browser">
+                    <datalist id="browsers">
+                      <option value="Grade">
+                      
+                    </datalist>
+        
+                    <input list="Grade" name="Grade" >
+                    <datalist id="Grade">
+                      <option value="A++ ">
+                      <option value="A+ ">
+                      <option value="A ">
+                      <option value="B+ ">
+                      <option value="A- ">
+                    </datalist>
+        
+        
+        
+                    <input type="submit">
+                  </form>
+                </div>
+        
+                  <hr>
+
+        <table class="vitamins">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Grade</th>
+                    <th>Channel</th>
+                    <th>Video Uploads</th>
+                    <th>Subscribers</th>
+                    <th>Views</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <td colspan="4">
+                        <p><strong>Betterplace Assignment</strong> Build by Rajat Singh</p>
+                   
+                    </td>
+                </tr>
+            </tfoot>
+            <tbody>
+                    <!-- Page Features 
+                    <iframe src = "http://localhost/perspectiv/frameview/" height="200" width="400" style = "padding:5px; " > -->
+                        
+                        <tr>
+                            <td><%= data.Rank %></td>
+                            <td><%= data.Grade %></td>
+                            <td><%= data['Channel name'] %></td>
+                            <td><%= data['Video Uploads'] %></td>
+                            <td><%= data.Subscribers %></td>
+                            <td><%= data['Video views'] %></td>
+                        </tr>
+               
+            </tbody>
+        </table>
+    </article>
+
+</body>
+<script>
+var dis1 = document.getElementById("browsers");
+dis1.onchange = function () {
+   if (this.value == "Grade" || this.value.length > 0) {
+      document.getElementById("Grade").disabled = false;
+   }
+}</script>
+
+  </html>
